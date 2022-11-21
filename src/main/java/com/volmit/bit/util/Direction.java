@@ -18,7 +18,6 @@
 
 package com.volmit.bit.util;
 
-import com.volmit.adapt.util.Cuboid.CuboidDirection;
 import org.bukkit.Axis;
 import org.bukkit.block.BlockFace;
 import org.bukkit.util.Vector;
@@ -34,21 +33,21 @@ import java.util.Map;
  * @author cyberpwn
  */
 public enum Direction {
-    U(0, 1, 0, CuboidDirection.Up),
-    D(0, -1, 0, CuboidDirection.Down),
-    N(0, 0, -1, CuboidDirection.North),
-    S(0, 0, 1, CuboidDirection.South),
-    E(1, 0, 0, CuboidDirection.East),
-    W(-1, 0, 0, CuboidDirection.West);
+    U(0, 1, 0, Cuboid.CuboidDirection.Up),
+    D(0, -1, 0, Cuboid.CuboidDirection.Down),
+    N(0, 0, -1, Cuboid.CuboidDirection.North),
+    S(0, 0, 1, Cuboid.CuboidDirection.South),
+    E(1, 0, 0, Cuboid.CuboidDirection.East),
+    W(-1, 0, 0, Cuboid.CuboidDirection.West);
 
     private static Map<GBiset<Direction, Direction>, DOP> permute = null;
 
     private final int x;
     private final int y;
     private final int z;
-    private final CuboidDirection f;
+    private final Cuboid.CuboidDirection f;
 
-    Direction(int x, int y, int z, CuboidDirection f) {
+    Direction(int x, int y, int z, Cuboid.CuboidDirection f) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -372,7 +371,7 @@ public enum Direction {
         return z;
     }
 
-    public CuboidDirection f() {
+    public Cuboid.CuboidDirection f() {
         return f;
     }
 

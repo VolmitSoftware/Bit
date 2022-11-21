@@ -19,7 +19,7 @@
 package com.volmit.bit.util;
 
 import com.google.gson.Gson;
-import com.volmit.adapt.Adapt;
+import com.volmit.bit.Bit;
 import org.bukkit.ChatColor;
 
 public class DirtyString {
@@ -35,7 +35,7 @@ public class DirtyString {
 
     public static boolean has(String data) {
         if (!HiddenStringUtils.hasHiddenString(data)) {
-            Adapt.info("Not has in " + data.replaceAll("\\Q" + ChatColor.COLOR_CHAR + "\\E", "&"));
+            Bit.info("Not has in " + data.replaceAll("\\Q" + ChatColor.COLOR_CHAR + "\\E", "&"));
         }
         return HiddenStringUtils.hasHiddenString(data);
     }
