@@ -1,5 +1,6 @@
 package com.volmit.bit;
 
+import art.arcane.spatial.space.Space;
 import com.volmit.bit.util.C;
 import com.volmit.bit.util.Instance;
 import com.volmit.bit.util.VolmitPlugin;
